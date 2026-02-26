@@ -1,0 +1,306 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Georgia, serif;
+    background: linear-gradient(to right,#f4f1ea,#e8dfd1);
+    color:#2c2c2c;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 60px;
+    background:#efe3a5;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#3a2c22;
+    position:relative;
+    font-weight:500;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background:#5a1f14;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:70px;
+    min-height:85vh;
+}
+
+/* ================= BIOGRAPHY ================= */
+.bio{
+    width:60%;
+}
+
+.bio h1{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.bio h3{
+    margin-bottom:25px;
+    color:#555;
+}
+
+.bio p{
+    font-size:20px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+/* ================= IMAGE SECTION ================= */
+.image-box{
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* IMAGE */
+.image-box img{
+    width:280px;
+    border-radius:10px;
+    transition:0.4s ease;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* GLOW HOVER */
+.image-box img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #b98b5a,
+               0 0 50px rgba(185,139,90,0.6),
+               0 0 80px rgba(185,139,90,0.3);
+}
+
+/* ================= BUTTON AREA ================= */
+.button-area{
+    margin-top:70px;   /* Large gap below image */
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    align-items:center;
+}
+
+/* BUTTON */
+.achievement-btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#5a1f14;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    transition:0.4s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.achievement-btn:hover{
+    background:#7b2e20;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= FOOTER ================= */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2c2c2c;
+    color:white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+        padding:40px;
+    }
+
+    .bio{
+        width:100%;
+    }
+
+    .image-box{
+        width:100%;
+        margin-top:40px;
+    }
+
+}
+/* HIDDEN CONTENT */
+.hidden-content{
+    display:none;
+    margin-top:15px;
+    line-height:1.8;
+}
+
+/* READ BUTTON */
+.read-btn{
+    margin-top:15px;
+    padding:10px 22px;
+    background:#5a1f14;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.read-btn:hover{
+    background:#7b2e20;
+    transform:translateY(-3px);
+}
+
+/* SCROLL ANIMATION */
+.scroll{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s ease;
+}
+
+.scroll.show{
+    opacity:1;
+    transform:translateY(0);
+}
+/* ================= POETRY PAGE ================= */
+
+.poetry-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.poetry-section h1{
+    font-size:50px;
+    margin-bottom:60px;
+}
+
+.poetry-card{
+    max-width:750px;
+    margin:40px auto;
+    padding:40px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.poetry-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ================= STORIES PAGE ================= */
+
+.stories-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.stories-section h1{
+    font-size:50px;
+    margin-bottom:60px;
+}
+
+.story-card{
+    max-width:750px;
+    margin:40px auto;
+    padding:40px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.story-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ================= NOVEL PAGE ================= */
+
+.novel-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.novel-section h1{
+    font-size:50px;
+    margin-bottom:60px;
+}
+
+.novel-card{
+    max-width:750px;
+    margin:40px auto;
+    padding:40px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.novel-card:hover{
+    transform:translateY(-5px);
+}
+/* ================= ACHIEVEMENT PAGE ================= */
+
+.achievement-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.achievement-section h1{
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.achievement-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.achievement-image img{
+    width:300px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    transition:0.4s ease;
+}
+
+/* 🔥 Hover Animation */
+.achievement-image img:hover{
+    transform:scale(1.08);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.achievement-text{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.7;
+}
